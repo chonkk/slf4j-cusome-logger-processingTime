@@ -1,0 +1,15 @@
+<configuration scan="true" scanPeriod="60 seconds">
+    <!-- console appender -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS},%p,[%c{1}],[%C],[%F:%L],thread[%t] :: %m%X{processingTimeMSec}%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+    </root>
+
+</configuration>
