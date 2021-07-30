@@ -60,6 +60,7 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
             }
         }
     }
+
     @Override
     public String getName() {
         return logger.getName();
@@ -77,17 +78,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void trace(String format, Object arg) {
-        log(null, null, LocationAwareLogger.TRACE_INT, format, arg);
+        log(null, null, LocationAwareLogger.TRACE_INT, String.format(format, arg));
     }
 
     @Override
     public void trace(String format, Object arg1, Object arg2) {
-        log(null, null, LocationAwareLogger.TRACE_INT, format, arg1, arg2);
+        log(null, null, LocationAwareLogger.TRACE_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void trace(String format, Object... arguments) {
-        log(null, null, LocationAwareLogger.TRACE_INT, format, arguments);
+        log(null, null, LocationAwareLogger.TRACE_INT, String.format(format, arguments));
     }
 
     @Override
@@ -107,17 +108,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void trace(Marker marker, String format, Object arg) {
-        log(marker, null, LocationAwareLogger.TRACE_INT, format, arg);
+        log(marker, null, LocationAwareLogger.TRACE_INT, String.format(format, arg));
     }
 
     @Override
     public void trace(Marker marker, String format, Object arg1, Object arg2) {
-        log(marker, null, LocationAwareLogger.TRACE_INT, format, arg1, arg2);
+        log(marker, null, LocationAwareLogger.TRACE_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void trace(Marker marker, String format, Object... argArray) {
-        log(marker, null, LocationAwareLogger.TRACE_INT, format, argArray);
+        log(marker, null, LocationAwareLogger.TRACE_INT, String.format(format, argArray));
     }
 
     @Override
@@ -137,17 +138,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void debug(String format, Object arg) {
-        log(null, null, LocationAwareLogger.DEBUG_INT, format, arg);
+        log(null, null, LocationAwareLogger.DEBUG_INT, String.format(format, arg));
     }
 
     @Override
     public void debug(String format, Object arg1, Object arg2) {
-        log(null, null, LocationAwareLogger.DEBUG_INT, format, arg1, arg2);
+        log(null, null, LocationAwareLogger.DEBUG_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void debug(String format, Object... arguments) {
-        log(null, null, LocationAwareLogger.DEBUG_INT, format, arguments);
+        log(null, null, LocationAwareLogger.DEBUG_INT, String.format(format, arguments));
     }
 
     @Override
@@ -167,17 +168,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void debug(Marker marker, String format, Object arg) {
-        log(marker, null, LocationAwareLogger.DEBUG_INT, format, arg);
+        log(marker, null, LocationAwareLogger.DEBUG_INT, String.format(format, arg));
     }
 
     @Override
     public void debug(Marker marker, String format, Object arg1, Object arg2) {
-        log(marker, null, LocationAwareLogger.DEBUG_INT, format, arg1, arg2);
+        log(marker, null, LocationAwareLogger.DEBUG_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void debug(Marker marker, String format, Object... arguments) {
-        log(marker, null, LocationAwareLogger.DEBUG_INT, format, arguments);
+        log(marker, null, LocationAwareLogger.DEBUG_INT, String.format(format, arguments));
     }
 
     @Override
@@ -202,12 +203,12 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void info(String format, Object arg1, Object arg2) {
-        log(null, null,LocationAwareLogger.INFO_INT, format, arg1, arg2);
+        log(null, null,LocationAwareLogger.INFO_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void info(String format, Object... arguments) {
-        log(null, null,LocationAwareLogger.INFO_INT, format, arguments);
+        log(null, null,LocationAwareLogger.INFO_INT, String.format(format, arguments));
     }
 
     @Override
@@ -227,17 +228,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void info(Marker marker, String format, Object arg) {
-        log(marker, null, LocationAwareLogger.INFO_INT, format, arg);
+        log(marker, null, LocationAwareLogger.INFO_INT, String.format(format, arg));
     }
 
     @Override
     public void info(Marker marker, String format, Object arg1, Object arg2) {
-        log(marker, null, LocationAwareLogger.INFO_INT, format, arg1, arg2);
+        log(marker, null, LocationAwareLogger.INFO_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void info(Marker marker, String format, Object... arguments) {
-        log(marker, null, LocationAwareLogger.INFO_INT, format, arguments);
+        log(marker, null, LocationAwareLogger.INFO_INT, String.format(format, arguments));
     }
 
     @Override
@@ -257,17 +258,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void warn(String format, Object arg) {
-        log(null, null, LocationAwareLogger.WARN_INT, format, arg);
+        log(null, null, LocationAwareLogger.WARN_INT, String.format(format, arg));
     }
 
     @Override
     public void warn(String format, Object... arguments) {
-        log(null, null, LocationAwareLogger.WARN_INT, format, arguments);
+        log(null, null, LocationAwareLogger.WARN_INT, String.format(format, arguments));
     }
 
     @Override
     public void warn(String format, Object arg1, Object arg2) {
-        log(null, null, LocationAwareLogger.WARN_INT, format, arg1, arg2);
+        log(null, null, LocationAwareLogger.WARN_INT, String.format(format, arg1, arg2));
     }
 
     @Override
@@ -287,17 +288,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void warn(Marker marker, String format, Object arg) {
-        log(marker, null, LocationAwareLogger.WARN_INT, format, arg);
+        log(marker, null, LocationAwareLogger.WARN_INT, String.format(format, arg));
     }
 
     @Override
     public void warn(Marker marker, String format, Object arg1, Object arg2) {
-        log(marker, null, LocationAwareLogger.WARN_INT, format, arg1, arg2);
+        log(marker, null, LocationAwareLogger.WARN_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void warn(Marker marker, String format, Object... arguments) {
-        log(marker, null, LocationAwareLogger.WARN_INT, format, arguments);
+        log(marker, null, LocationAwareLogger.WARN_INT, String.format(format, arguments));
     }
 
     @Override
@@ -317,17 +318,17 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void error(String format, Object arg) {
-        log(null, null, LocationAwareLogger.ERROR_INT, format, arg);
+        log(null, null, LocationAwareLogger.ERROR_INT, String.format(format, arg));
     }
 
     @Override
     public void error(String format, Object arg1, Object arg2) {
-        log(null, null, LocationAwareLogger.ERROR_INT, format, arg1, arg2);
+        log(null, null, LocationAwareLogger.ERROR_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void error(String format, Object... arguments) {
-        log(null, null, LocationAwareLogger.ERROR_INT, format, arguments);
+        log(null, null, LocationAwareLogger.ERROR_INT, String.format(format, arguments));
     }
 
     @Override
@@ -347,21 +348,28 @@ public class CiSlf4jLogger implements org.slf4j.Logger {
 
     @Override
     public void error(Marker marker, String format, Object arg) {
-        log(marker, null, LocationAwareLogger.ERROR_INT, format, arg);
+        log(marker, null, LocationAwareLogger.ERROR_INT, String.format(format, arg));
     }
 
     @Override
     public void error(Marker marker, String format, Object arg1, Object arg2) {
-        log(marker, null, LocationAwareLogger.ERROR_INT, format, arg1, arg2);
+        log(marker, null, LocationAwareLogger.ERROR_INT, String.format(format, arg1, arg2));
     }
 
     @Override
     public void error(Marker marker, String format, Object... arguments) {
-        log(marker, null, LocationAwareLogger.ERROR_INT, format, arguments);
+        log(marker, null, LocationAwareLogger.ERROR_INT, String.format(format, arguments));
     }
 
     @Override
     public void error(Marker marker, String msg, Throwable t) {
         log(marker, t, LocationAwareLogger.ERROR_INT, msg);
+    }
+    public void error(Throwable t, String format, Object...args) {
+        log(null, t, LocationAwareLogger.ERROR_INT, String.format(format, args));
+    }
+
+    public void error(Throwable t) {
+        log(null, t, LocationAwareLogger.ERROR_INT, "");
     }
 }
